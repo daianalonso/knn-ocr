@@ -124,7 +124,7 @@ make install
 ./build.sh
 cd build && make
 ```
-- Ejecutar con los datos de test y train de kaggle
+- Ejecutar con los datos de test y train de kaggle, setear cantidad de vecinos (k) y cantidad de componentes principales (a) a utilizar
 ```
 ./tp2 -m 1 --k <kNN parameter> --a <pca parameter> -i train_kaggle.csv -t test_kaggle.csv -o kaggle_submission.csv
 ```
