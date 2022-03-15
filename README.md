@@ -117,17 +117,15 @@ cmake -DPYTHON_EXECUTABLE="$(which python)" -DCMAKE_BUILD_TYPE=Release ..
 make install
 ```
 
-# Kaggle submission Digit Recognizer
+## Kaggle submission Digit Recognizer
 
 - Compilar el código C++
-
+```
 ./build.sh
-
 cd build && make
-
+```
 - Ejecutar con los datos de test y train de kaggle
-
-### method 0 kNN, 1 kNN + PCA
+```
 ./tp2 -m 1 --k <kNN parameter> --a <pca parameter> -i train_kaggle.csv -t test_kaggle.csv -o kaggle_submission.csv
-
+```
 - En la carpeta data se guarda el archivo resultado para subir a kaggle
