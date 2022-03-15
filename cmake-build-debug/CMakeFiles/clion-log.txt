@@ -1,0 +1,7 @@
+/usr/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" "/mnt/c/Users/Sebastian/Desktop/Seba/UBA/Métodos Numéricos/Laboratorio/met-num-tp2"
+Debug mode
+-- pybind11 v2.2.4
+CMAKE_INSTALL_PREFIX=/mnt/c/Users/Sebastian/Desktop/Seba/UBA/MÃ©todos NumÃ©ricos/Laboratorio/met-num-tp2
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /mnt/c/Users/Sebastian/Desktop/Seba/UBA/MÃ©todos NumÃ©ricos/Laboratorio/met-num-tp2/cmake-build-debug
