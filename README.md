@@ -1,4 +1,4 @@
-# TP2 Métodos Numéricos: Reconocimiento de dígitos
+# Reconocimiento de dígitos: TP2 Métodos Numéricos DC-UBA
 
 ## Instrucciones
 
