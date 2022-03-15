@@ -1,8 +1,6 @@
-# Reconocimiento de dígitos: TP2 de Métodos Numéricos
-## 2021, 2do cuatrimestre
+# TP2 Métodos Numéricos: Reconocimiento de dígitos
 
 ## Instrucciones
-
 
 1. Crear un repo git en donde se bajen esto
 
@@ -17,10 +15,9 @@ git remote add origin <nuestra-nueva-url-de-git>
 git submodule init
 git submodule add https://github.com/eigenteam/eigen-git-mirror
 git submodule add https://github.com/pybind/pybind11
-git mv eigen-git-mirror eigen
 # Elegimos versiones de eigen y pybind
 cd pybind11/ && git checkout v2.2.4 && cd ..
-cd eigen && git checkout 3.3.7 && cd ..
+cd eigen-git-mirror && git checkout 3.3.7 && cd ..
 ```
 
 3. Instalar requerimientos (*Previamente activar el entorno virtual. Ver  más abajo*)
@@ -41,7 +38,7 @@ cd data && gunzip *.gz && cd ..
 jupyter lab
 ```
 
-Listo. Ya pueden disfrutar del TP2
+Listo!
 
 ### Datos
 
@@ -108,7 +105,6 @@ jupyter notebook
 ## Compilación
 Ejecutar la primera celda del notebook `knn.ipynb` o seguir los siguientes pasos:
 
-
 - Compilar el código C++ en un módulo de python
 ```
 mkdir build
@@ -120,3 +116,18 @@ cmake -DPYTHON_EXECUTABLE="$(which python)" -DCMAKE_BUILD_TYPE=Release ..
 ```
 make install
 ```
+
+# Kaggle submission Digit Recognizer
+
+- Compilar el código C++
+
+./build.sh
+
+cd build && make
+
+- Ejecutar con los datos de test y train de kaggle
+
+### method 0 kNN, 1 kNN + PCA
+./tp2 -m 1 --k <kNN parameter> --a <pca parameter> -i train_kaggle.csv -t test_kaggle.csv -o kaggle_submission.csv
+
+- En la carpeta data se guarda el archivo resultado para subir a kaggle
